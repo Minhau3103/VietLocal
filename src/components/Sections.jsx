@@ -1,3 +1,6 @@
+import { useState } from 'react'
+import BlogModal from './BlogModal'
+import GuideModal from './GuideModal'
 import ImageWithFallback from './ImageWithFallback'
 import { useApp } from '../contexts/AppContext'
 import { DESTINATIONS, FOODS, BLOG_POSTS } from '../data/content'
@@ -112,7 +115,9 @@ export function FoodSection() {
 
 export function BlogSection() {
   const { t, lang } = useApp()
+  const [selectedPost, setSelectedPost] = useState(null)
   return (
+    <>
     <section id="blog-section" style={{ padding: '100px 0', background: 'var(--cream)' }}>
       <div className="container">
         <div style={{ textAlign: 'center', marginBottom: 52 }}>
@@ -123,7 +128,7 @@ export function BlogSection() {
 
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))', gap: 28 }}>
           {BLOG_POSTS.map(post => (
-            <article key={post.id} style={{
+            <article key={post.id} onClick={() => setSelectedPost(post)} style={{
               background: 'white', borderRadius: 20, overflow: 'hidden',
               boxShadow: 'var(--shadow)', cursor: 'pointer', transition: 'transform 0.2s, box-shadow 0.2s',
               border: '1px solid #EDE8E0',
@@ -163,6 +168,8 @@ export function BlogSection() {
         </div>
       </div>
     </section>
+    {selectedPost && <BlogModal post={selectedPost} onClose={() => setSelectedPost(null)} />}
+    </>
   )
 }
 

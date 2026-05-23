@@ -1,5 +1,6 @@
 import ImageWithFallback from './ImageWithFallback'
 import { useState } from 'react'
+import GuideModal from './GuideModal'
 import { Star, MapPin, MessageCircle, ChevronDown, ChevronUp } from 'lucide-react'
 import { useApp } from '../contexts/AppContext'
 import { GUIDES } from '../data/content'
@@ -7,6 +8,7 @@ import { GUIDES } from '../data/content'
 export default function GuidesSection() {
   const { t, lang, user, setShowLogin, setShowPayment, setCurrentPlan } = useApp()
   const [expanded, setExpanded] = useState(null)
+  const [selectedGuide, setSelectedGuide] = useState(null)
 
   const bookGuide = (guide) => {
     if (!user) { setShowLogin(true); return }
@@ -15,6 +17,7 @@ export default function GuidesSection() {
   }
 
   return (
+    <>
     <section id="guides-section" style={{ padding: '100px 0', background: '#F5F0E8' }}>
       <div className="container">
         <div style={{ textAlign: 'center', marginBottom: 52 }}>
@@ -55,7 +58,7 @@ export default function GuidesSection() {
 
               {/* Content */}
               <div style={{ padding: '20px 20px 8px' }}>
-                <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '1.3rem', color: 'var(--green)', marginBottom: 4 }}>
+                <h3 onClick={() => setSelectedGuide(guide)} style={{ fontFamily: 'var(--font-display)', fontSize: '1.3rem', color: 'var(--green)', marginBottom: 4, cursor: 'pointer', textDecoration: 'underline dotted' }}>
                   {lang === 'en' ? guide.name : guide.nameVi}
                 </h3>
                 <div style={{ display: 'flex', alignItems: 'center', gap: 4, color: 'var(--text-light)', fontSize: '0.82rem', marginBottom: 10 }}>
@@ -111,5 +114,7 @@ export default function GuidesSection() {
         </div>
       </div>
     </section>
+    {selectedGuide && <GuideModal guide={selectedGuide} onClose={() => setSelectedGuide(null)} />}
+    </>
   )
 }
