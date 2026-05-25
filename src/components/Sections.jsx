@@ -3,7 +3,7 @@ import BlogModal from './BlogModal'
 import GuideModal from './GuideModal'
 import ImageWithFallback from './ImageWithFallback'
 import { useApp } from '../contexts/AppContext'
-import { DESTINATIONS, FOODS, BLOG_POSTS } from '../data/content'
+import { DESTINATIONS, FOODS, BLOG_POSTS, FOOD_TOUR_POSTS } from '../data/content'
 import { ArrowRight, Clock, MapPin } from 'lucide-react'
 
 export function DestinationsSection() {
@@ -116,18 +116,39 @@ export function FoodSection() {
 export function BlogSection() {
   const { t, lang } = useApp()
   const [selectedPost, setSelectedPost] = useState(null)
+  const [activeFilter, setActiveFilter] = useState('all')
+
+  const allPosts = [...BLOG_POSTS, ...FOOD_TOUR_POSTS]
+  const filters = lang === 'vi'
+    ? [{ key: 'all', label: 'Tất cả' }, { key: 'Hanoi', label: 'Hà Nội' }, { key: 'Ho Chi Minh City', label: 'Hồ Chí Minh' }, { key: 'Da Nang', label: 'Đà Nẵng' }]
+    : [{ key: 'all', label: 'All' }, { key: 'Hanoi', label: 'Hanoi' }, { key: 'Ho Chi Minh City', label: 'Ho Chi Minh' }, { key: 'Da Nang', label: 'Da Nang' }]
+  const filtered = activeFilter === 'all' ? allPosts : allPosts.filter(p => p.city === activeFilter)
+
   return (
     <>
     <section id="blog-section" style={{ padding: '100px 0', background: 'var(--cream)' }}>
       <div className="container">
-        <div style={{ textAlign: 'center', marginBottom: 52 }}>
+        <div style={{ textAlign: 'center', marginBottom: 40 }}>
           <div className="section-label">📖 {lang === 'en' ? 'Stories' : 'Câu chuyện'}</div>
           <h2 className="section-title">{t.blog.title}</h2>
-          <p style={{ color: 'var(--text-mid)', maxWidth: 480, margin: '0 auto' }}>{t.blog.subtitle}</p>
+          <p style={{ color: 'var(--text-mid)', maxWidth: 480, margin: '0 auto 28px' }}>{t.blog.subtitle}</p>
+          {/* Filter tabs */}
+          <div style={{ display: 'flex', gap: 8, justifyContent: 'center', flexWrap: 'wrap' }}>
+            {filters.map(f => (
+              <button key={f.key} onClick={() => setActiveFilter(f.key)} style={{
+                padding: '7px 20px', borderRadius: 50, border: 'none', cursor: 'pointer',
+                fontFamily: 'var(--font-body)', fontWeight: 600, fontSize: '0.85rem',
+                background: activeFilter === f.key ? 'var(--green)' : 'white',
+                color: activeFilter === f.key ? 'white' : 'var(--text-mid)',
+                border: activeFilter === f.key ? 'none' : '1.5px solid #DDD',
+                transition: 'all 0.2s',
+              }}>{f.label}</button>
+            ))}
+          </div>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))', gap: 28 }}>
-          {BLOG_POSTS.map(post => (
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: 24 }}>
+          {filtered.map(post => (
             <article key={post.id} onClick={() => setSelectedPost(post)} style={{
               background: 'white', borderRadius: 20, overflow: 'hidden',
               boxShadow: 'var(--shadow)', cursor: 'pointer', transition: 'transform 0.2s, box-shadow 0.2s',
@@ -136,32 +157,41 @@ export function BlogSection() {
             onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-4px)'; e.currentTarget.style.boxShadow = 'var(--shadow-lg)' }}
             onMouseLeave={e => { e.currentTarget.style.transform = ''; e.currentTarget.style.boxShadow = 'var(--shadow)' }}
             >
-              <div style={{ height: 200, overflow: 'hidden', position: 'relative' }}>
-                <ImageWithFallback src={post.photo} alt={post.title} fallbackEmoji='📖' style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                <div style={{ position: 'absolute', top: 14, left: 14 }}>
-                  <span style={{
-                    background: 'var(--green)', color: 'white',
-                    borderRadius: 50, padding: '4px 12px', fontSize: '0.75rem', fontWeight: 600,
-                  }}>{lang === 'en' ? post.city : post.cityVi}</span>
+              <div style={{ height: 180, overflow: 'hidden', position: 'relative' }}>
+                <ImageWithFallback src={post.photo} alt={post.title} fallbackEmoji="📖" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                <div style={{ position: 'absolute', top: 12, left: 12, display: 'flex', gap: 6 }}>
+                  <span style={{ background: 'var(--green)', color: 'white', borderRadius: 50, padding: '3px 10px', fontSize: '0.72rem', fontWeight: 600 }}>
+                    {lang === 'vi' ? post.cityVi : post.city}
+                  </span>
+                  {post.tag && (
+                    <span style={{ background: 'var(--gold)', color: 'white', borderRadius: 50, padding: '3px 10px', fontSize: '0.72rem', fontWeight: 600 }}>
+                      {lang === 'vi' ? (post.tagVi || post.tag) : post.tag}
+                    </span>
+                  )}
                 </div>
               </div>
-              <div style={{ padding: '22px 24px' }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 12 }}>
-                  <span style={{ color: 'var(--text-light)', fontSize: '0.78rem' }}>{post.date}</span>
-                  <span style={{ color: 'var(--text-light)', fontSize: '0.78rem', display: 'flex', alignItems: 'center', gap: 3 }}>
-                    <Clock size={11} /> {lang === 'en' ? post.readTime : post.readTimeVi}
+              <div style={{ padding: '18px 20px' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 10 }}>
+                  <span style={{ color: 'var(--text-light)', fontSize: '0.75rem' }}>{post.date}</span>
+                  <span style={{ color: 'var(--text-light)', fontSize: '0.75rem', display: 'flex', alignItems: 'center', gap: 3 }}>
+                    ⏱ {lang === 'vi' ? post.readTimeVi : post.readTime}
                   </span>
                 </div>
-                <h3 style={{
-                  fontFamily: 'var(--font-display)', fontSize: '1.25rem',
-                  color: 'var(--text-dark)', lineHeight: 1.3, marginBottom: 10,
-                }}>{lang === 'en' ? post.title : post.titleVi}</h3>
-                <p style={{ color: 'var(--text-mid)', fontSize: '0.86rem', lineHeight: 1.65, marginBottom: 16 }}>
-                  {lang === 'en' ? post.excerpt : post.excerptVi}
+                <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '1.15rem', color: 'var(--text-dark)', lineHeight: 1.3, marginBottom: 8 }}>
+                  {lang === 'vi' ? post.titleVi : post.title}
+                </h3>
+                <p style={{ color: 'var(--text-mid)', fontSize: '0.83rem', lineHeight: 1.6, marginBottom: 12 }}>
+                  {lang === 'vi' ? post.excerptVi : post.excerpt}
                 </p>
-                <span style={{ color: 'var(--green)', fontSize: '0.85rem', fontWeight: 600, display: 'flex', alignItems: 'center', gap: 4 }}>
-                  {t.blog.readMore} <ArrowRight size={14} />
-                </span>
+                {post.spots && (
+                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: 4 }}>
+                    {post.spots.slice(0,2).map((s,i) => (
+                      <span key={i} style={{ background: 'var(--cream-dark)', borderRadius: 50, padding: '2px 8px', fontSize: '0.72rem', color: 'var(--text-mid)' }}>
+                        📍 {s.name}
+                      </span>
+                    ))}
+                  </div>
+                )}
               </div>
             </article>
           ))}

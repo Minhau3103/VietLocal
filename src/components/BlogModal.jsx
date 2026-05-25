@@ -55,6 +55,36 @@ export default function BlogModal({ post, onClose }) {
         <div style={{ padding: '32px 36px 40px', fontSize: '0.95rem', lineHeight: 1.9, color: 'var(--text-dark)' }}>
           <div dangerouslySetInnerHTML={{ __html: renderContent(content || post.excerpt || post.excerptVi) }} />
         </div>
+
+        {/* Spots section */}
+        {post.spots && post.spots.length > 0 && (
+          <div style={{ padding: '0 36px 36px' }}>
+            <div style={{ background: 'var(--cream)', borderRadius: 16, padding: '20px 24px' }}>
+              <div style={{ fontWeight: 700, fontSize: '0.85rem', color: 'var(--green)', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: 14 }}>
+                📍 {lang === 'vi' ? 'Địa điểm gợi ý' : 'Recommended Spots'}
+              </div>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+                {post.spots.map((s, i) => {
+                  const addr = lang === 'vi' ? s.addressVi : s.address
+                  const mapUrl = 'https://maps.google.com/?q=' + encodeURIComponent(s.name + ' ' + addr)
+                  return (
+                    <div key={i} style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: 12 }}>
+                      <div>
+                        <div style={{ fontWeight: 600, fontSize: '0.88rem', color: 'var(--text-dark)' }}>{s.name}</div>
+                        <div style={{ fontSize: '0.8rem', color: 'var(--text-light)', marginTop: 2 }}>{addr}</div>
+                      </div>
+                      <a href={mapUrl} target="_blank" rel="noopener noreferrer" style={{
+                        display: 'inline-flex', alignItems: 'center', gap: 4, flexShrink: 0,
+                        background: 'var(--green)', color: 'white', padding: '4px 12px',
+                        borderRadius: 50, fontSize: '0.72rem', textDecoration: 'none', fontWeight: 700,
+                      }}>🗺 Maps ↗</a>
+                    </div>
+                  )
+                })}
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   )

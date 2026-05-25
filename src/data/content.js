@@ -354,3 +354,302 @@ Khoảng sau 8 giờ tối, rất nhiều người mới bắt đầu ra đườ
 Sài Gòn được nhớ vì năng lượng của nó. Và có lẽ, điều đặc biệt nhất là dù bạn đến đây với lý do gì, thành phố này luôn cho bạn cảm giác: *"Mình có thể bắt đầu lại một điều gì đó ở đây."*`
   },
 ]
+
+export const FOOD_TOUR_POSTS = [
+  {
+    id: 4,
+    title: 'Hanoi – Old Quarter Food Tour',
+    titleVi: 'Hà Nội – Food Tour Phố Cổ',
+    excerpt: 'Going to Hanoi without trying the Old Quarter food scene at night is honestly such a waste. I randomly joined a food tour and it turned out way better than expected...',
+    excerptVi: 'Đi Hà Nội mà không ăn phố cổ buổi tối là tiếc thật luôn 😭 Mình vừa có một buổi food tour kiểu random nhưng kết quả lại ngon ngoài mong đợi...',
+    photo: 'https://statics.vincom.com.vn/xu-huong/anh_thumbnail/an-gi-o-ha-noi-thumnail.jpeg',
+    city: 'Hanoi', cityVi: 'Hà Nội',
+    tag: 'Food Tour', tagVi: 'Food Tour',
+    readTime: '4 min', readTimeVi: '4 phút đọc', date: 'May 2025',
+    spots: [
+      { name: 'Bún Chả Hàng Quạt', address: '74 Hàng Quạt, Hoàn Kiếm', addressVi: '74 Hàng Quạt, Hoàn Kiếm' },
+      { name: 'Nem Rán Phố Cổ', address: '38 Hàng Buồm, Hoàn Kiếm', addressVi: '38 Hàng Buồm, Hoàn Kiếm' },
+      { name: 'Café Giảng', address: '39 Nguyễn Hữu Huân, Hoàn Kiếm', addressVi: '39 Nguyễn Hữu Huân, Hoàn Kiếm' },
+    ],
+    content: `Going to Hanoi without trying the Old Quarter food scene at night is honestly such a waste 😭
+
+I randomly joined a food tour one evening and it turned out way better than I expected. Just walking around the Old Quarter, every local spot was packed with people.
+
+The grilled bún chả was probably my favorite — the smell literally pulled me into the restaurant 😭 The fried spring rolls were super crispy and fresh. After eating, sitting on tiny plastic chairs drinking local beer while watching the streets light up felt peak Hanoi.
+
+And you HAVE to try egg coffee. I thought it'd taste weird at first but it was actually so addictive. Creamy, sweet, slightly bitter… sitting in a small café overlooking the street was such a vibe.
+
+## 📍 Recommended Spots
+
+**Bún Chả Hàng Quạt** — 74 Hàng Quạt, Hoàn Kiếm
+The smell alone will pull you in. Grilled pork patties, fresh herbs, vermicelli — this is Hanoi in a bowl.
+
+**Nem Rán Phố Cổ** — 38 Hàng Buồm, Hoàn Kiếm
+Crispy, piping hot spring rolls. Best eaten standing on the street.
+
+**Café Giảng** — 39 Nguyễn Hữu Huân, Hoàn Kiếm
+The original egg coffee spot. Go upstairs, find a window seat, and take your time.`,
+    contentVi: `Đi Hà Nội mà không ăn phố cổ buổi tối là tiếc thật luôn 😭
+
+Mình vừa có một buổi food tour kiểu random nhưng kết quả lại ngon ngoài mong đợi. Đi bộ loanh quanh khu phố cổ thôi mà quán nào cũng đông nghịt người địa phương.
+
+Ấn tượng nhất chắc là bún chả nướng thơm cực kỳ, kiểu vừa đi ngang là bị mùi kéo vào luôn 😭 Nem rán thì giòn, nóng hổi. Ăn xong ngồi vỉa hè uống bia hơi nhìn phố lên đèn đúng vibe Hà Nội luôn.
+
+À và nhất định phải thử cà phê trứng nha. Ban đầu mình nghĩ sẽ khó uống nhưng ai ngờ cuốn thật sự. Kiểu béo béo thơm thơm, ngồi trong quán nhỏ nhìn xuống phố rất chill.
+
+## 📍 Gợi ý địa điểm
+
+**Bún Chả Hàng Quạt** — 74 Hàng Quạt, Hoàn Kiếm
+Chỉ cần đi ngang là bị mùi kéo vào. Chả nướng thơm, rau thơm tươi, bún mịn — đây chính là Hà Nội trong một tô.
+
+**Nem Rán Phố Cổ** — 38 Hàng Buồm, Hoàn Kiếm
+Nem giòn, nóng hổi. Ăn đứng ngoài phố mới đúng chất.
+
+**Café Giảng** — 39 Nguyễn Hữu Huân, Hoàn Kiếm
+Quán cà phê trứng lâu đời nhất Hà Nội. Lên tầng trên, tìm chỗ ngồi cạnh cửa sổ và nhâm nhi thật lâu.`,
+  },
+  {
+    id: 5,
+    title: 'Hanoi – Local Coffee Tour',
+    titleVi: 'Hà Nội – Tour Cà Phê Local',
+    excerpt: 'Hanoi is honestly heaven for people who love café hopping. A local took me to hidden cafés tucked inside tiny alleys — no way I could have found them on my own...',
+    excerptVi: 'Hà Nội đúng kiểu thành phố dành cho những người thích đi cà phê 🥹 Mình được local dẫn đi mấy quán nằm trong ngõ nhỏ, nếu tự đi chắc chắn không bao giờ biết...',
+    photo: 'https://miro.medium.com/v2/resize:fit:1200/1*0qRZ9kYqKu2beSr-b5doNA.jpeg',
+    city: 'Hanoi', cityVi: 'Hà Nội',
+    tag: 'Café Tour', tagVi: 'Tour Cà Phê',
+    readTime: '4 min', readTimeVi: '4 phút đọc', date: 'April 2025',
+    spots: [
+      { name: 'Loading T Café', address: '8 Chân Cầm, Hoàn Kiếm', addressVi: '8 Chân Cầm, Hoàn Kiếm' },
+      { name: 'The Note Coffee', address: '64 Lương Văn Can, Hoàn Kiếm', addressVi: '64 Lương Văn Can, Hoàn Kiếm' },
+      { name: 'Tranquil Books & Coffee', address: '18B Nguyễn Biểu, Ba Đình', addressVi: '18B Nguyễn Biểu, Ba Đình' },
+    ],
+    content: `Hanoi is honestly heaven for people who love café hopping 🥹
+
+A local took me to a few hidden cafés tucked inside tiny alleys — there's no way I could've found them on my own.
+
+Some places looked old from the outside but had the coziest atmosphere ever. Warm yellow lights, soft music, super quiet… the kind of place you end up sitting in for hours. And the egg coffee here tasted way better than I imagined, almost like a dessert.
+
+What I loved most is that every café had its own story. They didn't feel overly commercialized like the trendy TikTok cafés.
+
+## 📍 Recommended Spots
+
+**Loading T Café** — 8 Chân Cầm, Hoàn Kiếm
+Hidden down a quiet alley. Great for people-watching and slow afternoons.
+
+**The Note Coffee** — 64 Lương Văn Can, Hoàn Kiếm
+The walls are covered in handwritten notes from visitors around the world. Super charming.
+
+**Tranquil Books & Coffee** — 18B Nguyễn Biểu, Ba Đình
+Books, coffee, and total peace. The best combination in Hanoi.`,
+    contentVi: `Hà Nội đúng kiểu thành phố dành cho những người thích đi cà phê 🥹
+
+Mình được local dẫn đi mấy quán nằm trong ngõ nhỏ, nếu tự đi chắc chắn không bao giờ biết.
+
+Có quán nhìn cũ cũ thôi nhưng vibe cực kỳ đẹp, kiểu yên tĩnh, nhạc nhẹ, ánh sáng vàng vàng rất hợp ngồi cả chiều. Cà phê trứng ở đây ngon hơn mình tưởng nhiều, không bị tanh mà thơm kiểu bánh kem ấy.
+
+Điều mình thích nhất là mỗi quán đều có một câu chuyện riêng, cảm giác không bị commercial quá như các quán hot trên TikTok.
+
+## 📍 Gợi ý địa điểm
+
+**Loading T Café** — 8 Chân Cầm, Hoàn Kiếm
+Nằm sâu trong ngõ nhỏ yên tĩnh. Lý tưởng để ngồi cả buổi chiều.
+
+**The Note Coffee** — 64 Lương Văn Can, Hoàn Kiếm
+Tường phủ đầy ghi chú tay của khách từ khắp nơi trên thế giới. Rất dễ thương.
+
+**Tranquil Books & Coffee** — 18B Nguyễn Biểu, Ba Đình
+Sách, cà phê và sự bình yên hoàn toàn. Combo tuyệt nhất ở Hà Nội.`,
+  },
+  {
+    id: 6,
+    title: 'Saigon – Night Motorbike Food Tour',
+    titleVi: 'Sài Gòn – Food Tour Xe Máy Buổi Tối',
+    excerpt: 'Food in Saigon somehow tastes even better at night. I joined a motorbike food tour and it was honestly SO fun — riding district to district just to eat...',
+    excerptVi: 'Không hiểu sao đồ ăn ở Sài Gòn lúc nào cũng ngon hơn khi ăn ban đêm 😭 Mình vừa trải nghiệm food tour bằng xe máy và thật sự quá vui luôn...',
+    photo: 'https://cdn.klfoodie.com/2024/06/326750465_121485594166043_5041546684692910779_n-768x768.jpg',
+    city: 'Ho Chi Minh City', cityVi: 'Hồ Chí Minh',
+    tag: 'Night Tour', tagVi: 'Tour Đêm',
+    readTime: '4 min', readTimeVi: '4 phút đọc', date: 'March 2025',
+    spots: [
+      { name: 'Phá Lấu Bò', address: '243/29 Tôn Đản, District 4', addressVi: '243/29 Tôn Đản, Quận 4' },
+      { name: 'Hủ Tiếu Gõ Đêm', address: 'Nguyễn Thượng Hiền St, District 3', addressVi: 'Đường Nguyễn Thượng Hiền, Quận 3' },
+      { name: 'Chè Mâm Khánh Vy', address: '242B Sư Vạn Hạnh, District 10', addressVi: '242B Sư Vạn Hạnh, Quận 10' },
+    ],
+    content: `I swear food in Saigon somehow tastes even better at night 😭
+
+I recently joined a motorbike food tour and it was honestly SO fun. We rode from district to district just to eat 😭 From phá lấu and grilled rice paper to late-night noodle carts and sweet dessert soups. Every place the local guide took us to felt like a hidden gem packed with locals.
+
+Honestly, sitting on the back of a motorbike, riding through busy streets at night before stopping at a tiny roadside food stall felt like the most Saigon experience ever.
+
+## 📍 Recommended Spots
+
+**Phá Lấu Bò** — 243/29 Tôn Đản, District 4
+Offal stew with coconut milk and spices. Sounds unusual, tastes incredible. District 4 is the real Saigon.
+
+**Hủ Tiếu Gõ Đêm** — Nguyễn Thượng Hiền Street, District 3
+The street cart that taps its bowl to announce it's coming. Late night, hot broth, pure comfort.
+
+**Chè Mâm Khánh Vy** — 242B Sư Vạn Hạnh, District 10
+A giant tray of Vietnamese sweet soups. You pick what you want — colorful, sweet, and totally worth it.`,
+    contentVi: `Không hiểu sao đồ ăn ở Sài Gòn lúc nào cũng ngon hơn khi ăn ban đêm 😭
+
+Mình vừa trải nghiệm food tour bằng xe máy và thật sự quá vui luôn. Đi từ quận này sang quận khác chỉ để ăn 😭 Từ phá lấu, bánh tráng nướng, hủ tiếu gõ cho tới chè đêm. Mỗi chỗ local dẫn đi đều kiểu 'quán ruột', đông nghẹt người nhưng ăn rất đáng.
+
+Cảm giác ngồi sau xe chạy qua mấy con đường đông đúc, gió tối mát mát rồi tấp vào quán ven đường ăn đồ nóng hổi đúng chất Sài Gòn luôn.
+
+## 📍 Gợi ý địa điểm
+
+**Phá Lấu Bò** — 243/29 Tôn Đản, Quận 4
+Nội tạng bò hầm nước cốt dừa và gia vị. Nghe lạ nhưng ăn rất cuốn. Quận 4 là Sài Gòn thật sự.
+
+**Hủ Tiếu Gõ Đêm** — Đường Nguyễn Thượng Hiền, Quận 3
+Xe gõ lốc cốc đi khắp phố. Đêm khuya, nước dùng nóng hổi, đúng chất bình dân.
+
+**Chè Mâm Khánh Vy** — 242B Sư Vạn Hạnh, Quận 10
+Mâm chè đủ màu sắc, tự chọn thứ mình thích. Ngọt ngào và đáng thử.`,
+  },
+  {
+    id: 7,
+    title: 'Saigon – Night Market Street Food',
+    titleVi: 'Sài Gòn – Ăn Vặt Chợ Đêm',
+    excerpt: 'Real review: going to Saigon night markets is dangerous because you WILL overeat. I planned to eat a little... ended up carrying food in both hands...',
+    excerptVi: 'Review thật lòng là đi chợ đêm Sài Gòn cực kỳ dễ bị… ăn quá tay 😭 Định vào ăn nhẹ thôi mà cuối cùng cầm full đồ ăn trên tay...',
+    photo: 'https://thecitylane.com/wp-content/uploads/2017/08/IMG_0312.jpg',
+    city: 'Ho Chi Minh City', cityVi: 'Hồ Chí Minh',
+    tag: 'Street Food', tagVi: 'Ăn Vặt',
+    readTime: '3 min', readTimeVi: '3 phút đọc', date: 'February 2025',
+    spots: [
+      { name: 'Hồ Thị Kỷ Night Market', address: 'Hồ Thị Kỷ Street, District 10', addressVi: 'Chợ Hồ Thị Kỷ, Quận 10' },
+      { name: 'Nguyễn Thượng Hiền Food Street', address: 'Nguyễn Thượng Hiền, Bình Thạnh', addressVi: 'Nguyễn Thượng Hiền, Bình Thạnh' },
+      { name: 'Bến Thành Night Market', address: 'Ben Thanh area, District 1', addressVi: 'Khu Bến Thành, Quận 1' },
+    ],
+    content: `Real review: going to Saigon night markets is dangerous because you WILL overeat 😭
+
+I planned to eat a little… ended up carrying food in both hands. This place is basically street food heaven. Grilled skewers smelled amazing, rice paper salad was insanely addictive, and every milk tea stall had a huge line. The atmosphere was so lively, especially going with friends.
+
+My favorite part was honestly just walking around, eating random snacks, and chatting. Super simple but somehow super fun.
+
+## 📍 Recommended Spots
+
+**Hồ Thị Kỷ Night Market** — District 10
+Saigon's most famous night food market. Everything from Thai food to Vietnamese snacks to fruit. Go hungry.
+
+**Nguyễn Thượng Hiền Food Street** — Bình Thạnh
+Less touristy, more local. The grilled skewers and rice paper rolls here are seriously good.
+
+**Bến Thành Night Market** — District 1
+Right next to Ben Thanh Market. Great for tourists but also genuinely delicious. The atmosphere at night is unbeatable.`,
+    contentVi: `Review thật lòng là đi chợ đêm Sài Gòn cực kỳ dễ bị… ăn quá tay 😭
+
+Định vào ăn nhẹ thôi mà cuối cùng cầm full đồ ăn trên tay. Ở đây kiểu thiên đường ăn vặt luôn á. Xiên nướng thơm cực kỳ, bánh tráng trộn siêu cuốn, trà sữa thì quầy nào cũng đông. Không khí đông vui nên đi với bạn bè là đúng bài.
+
+Mình thích nhất là cảm giác đi bộ vừa ăn vừa tám chuyện, kiểu rất đời thường nhưng lại vui cực.
+
+## 📍 Gợi ý địa điểm
+
+**Chợ Hồ Thị Kỷ** — Quận 10
+Chợ đêm ăn vặt nổi tiếng nhất Sài Gòn. Đủ từ đồ Thái đến đồ Việt. Đến khi đói bụng nhé.
+
+**Phố Ăn Vặt Nguyễn Thượng Hiền** — Bình Thạnh
+Ít khách du lịch hơn, local hơn. Xiên nướng và bánh tráng trộn ở đây ngon thật sự.
+
+**Chợ Đêm Bến Thành** — Quận 1
+Ngay cạnh chợ Bến Thành. Phù hợp cả khách du lịch lẫn người địa phương. Không khí buổi tối cực kỳ sôi động.`,
+  },
+  {
+    id: 8,
+    title: 'Da Nang – Night Seafood Experience',
+    titleVi: 'Đà Nẵng – Hải Sản Đêm',
+    excerpt: 'Da Nang at night is literally paradise for seafood lovers. A local brought me to a spot near the beach — not famous online but completely packed with locals...',
+    excerptVi: 'Đà Nẵng ban đêm đúng là dành cho team mê hải sản 😭 Mình được local dẫn đi ăn ở một quán ven biển, không quá nổi tiếng trên mạng nhưng đông dân địa phương cực...',
+    photo: 'https://tse3.mm.bing.net/th/id/OIP.vdBbbsStePLsvG0qh2uGTgHaE_?rs=1&pid=ImgDetMain&o=7&rm=3',
+    city: 'Da Nang', cityVi: 'Đà Nẵng',
+    tag: 'Seafood', tagVi: 'Hải Sản',
+    readTime: '4 min', readTimeVi: '4 phút đọc', date: 'March 2025',
+    spots: [
+      { name: 'Hải Sản Bé Mặn', address: 'Lot 14 Hoàng Sa, Sơn Trà', addressVi: 'Lô 14 Hoàng Sa, Sơn Trà' },
+      { name: 'Hải Sản Năm Đảnh', address: 'K139/H59/38 Trần Quang Khải, Sơn Trà', addressVi: 'K139/H59/38 Trần Quang Khải, Sơn Trà' },
+      { name: 'Mì Quảng Bà Mua', address: '95A Nguyễn Tri Phương, Hải Châu', addressVi: '95A Nguyễn Tri Phương, Hải Châu' },
+    ],
+    content: `Da Nang at night is literally paradise for seafood lovers 😭
+
+A local brought me to this seafood spot near the beach that wasn't super famous online but completely packed with locals. Everything tasted SO fresh. The shrimp was sweet, the grilled squid smelled incredible, and the scallops with scallion oil were ridiculously good.
+
+Eating seafood while listening to the ocean waves felt unbelievably relaxing. What I love about Da Nang is how calm everything feels. Even eating out feels more chill compared to bigger cities.
+
+## 📍 Recommended Spots
+
+**Hải Sản Bé Mặn** — Lot 14 Hoàng Sa, Sơn Trà
+Right by the beach. Packed with locals every night. Order the scallops with scallion oil — non-negotiable.
+
+**Hải Sản Năm Đảnh** — K139/H59/38 Trần Quang Khải, Sơn Trà
+Another local favorite. Great grilled squid and fresh shrimp at very reasonable prices.
+
+**Mì Quảng Bà Mua** — 95A Nguyễn Tri Phương, Hải Châu
+Da Nang's signature noodle dish done right. Rich, flavorful broth with just a little at the bottom — classic Central Vietnam style.`,
+    contentVi: `Đà Nẵng ban đêm đúng là dành cho team mê hải sản 😭
+
+Mình được local dẫn đi ăn ở một quán ven biển, không quá nổi tiếng trên mạng nhưng đông dân địa phương cực. Hải sản tươi thật sự, kiểu tôm còn ngọt thịt luôn ấy. Mực nướng thơm, sò mỡ hành béo cực kỳ.
+
+Vừa ăn vừa nghe tiếng biển nên cảm giác relax lắm. Điều mình thích ở Đà Nẵng là mọi thứ không quá vội, ăn uống cũng chill hơn nhiều so với các thành phố lớn.
+
+## 📍 Gợi ý địa điểm
+
+**Hải Sản Bé Mặn** — Lô 14 Hoàng Sa, Sơn Trà
+Ngay ven biển. Đông người địa phương mỗi tối. Order sò mỡ hành — không thể bỏ qua.
+
+**Hải Sản Năm Đảnh** — K139/H59/38 Trần Quang Khải, Sơn Trà
+Quán ruột của dân địa phương. Mực nướng ngon và tôm tươi giá rất hợp lý.
+
+**Mì Quảng Bà Mua** — 95A Nguyễn Tri Phương, Hải Châu
+Mì Quảng chuẩn vị Đà Nẵng. Nước dùng đậm đà, chỉ một chút ở đáy tô — đúng kiểu miền Trung.`,
+  },
+  {
+    id: 9,
+    title: 'Da Nang – Local Hidden Gem Food Tour',
+    titleVi: 'Đà Nẵng – Food Tour Local Hidden Gem',
+    excerpt: 'The best thing about having a local guide is discovering places that would NEVER show up on Google. Some restaurants looked ordinary but were packed with locals inside...',
+    excerptVi: 'Mình nghĩ điều hay nhất khi có local dẫn đi là được ăn ở những chỗ mà Google không bao giờ hiện 😭 Có mấy quán nhìn cực kỳ bình thường nhưng bước vào là full người địa phương...',
+    photo: 'https://fvgtravel.com.vn/uploads/up/root/editor/2024/10/17/16/03/w1230/goi1729134193_8371.jpg',
+    city: 'Da Nang', cityVi: 'Đà Nẵng',
+    tag: 'Hidden Gems', tagVi: 'Địa Điểm Ẩn',
+    readTime: '4 min', readTimeVi: '4 phút đọc', date: 'January 2025',
+    spots: [
+      { name: 'Bánh Xèo Bà Dưỡng', address: 'K280/23 Hoàng Diệu, Hải Châu', addressVi: 'K280/23 Hoàng Diệu, Hải Châu' },
+      { name: 'Bún Mắm Vân', address: 'K23/14 Trần Kế Xương, Hải Châu', addressVi: 'K23/14 Trần Kế Xương, Hải Châu' },
+      { name: 'Chè Liên', address: '175 Hải Phòng, Thanh Khê', addressVi: '175 Hải Phòng, Thanh Khê' },
+    ],
+    content: `I think the best thing about having a local guide is discovering places that would NEVER show up on Google 😭
+
+Some restaurants looked super ordinary from the outside but were packed with locals inside. The mì Quảng tasted incredibly authentic and the crispy Vietnamese pancakes were amazing.
+
+The local guide also shared stories about Da Nang people, their lifestyle, and food culture… so it felt less like just eating and more like actually experiencing local life.
+
+## 📍 Recommended Spots
+
+**Bánh Xèo Bà Dưỡng** — K280/23 Hoàng Diệu, Hải Châu
+Da Nang-style sizzling pancakes — larger than Saigon style, crispier, and eaten wrapped in rice paper with fresh herbs. A must.
+
+**Bún Mắm Vân** — K23/14 Trần Kế Xương, Hải Châu
+Fermented fish paste noodle soup. Strong, bold, distinctly Central Vietnamese. Not for the faint-hearted but absolutely worth it.
+
+**Chè Liên** — 175 Hải Phòng, Thanh Khê
+A local dessert shop that's been around forever. Cool, sweet, and the perfect end to a food tour.`,
+    contentVi: `Mình nghĩ điều hay nhất khi có local dẫn đi là được ăn ở những chỗ mà Google không bao giờ hiện 😭
+
+Có mấy quán nhìn cực kỳ bình thường thôi nhưng bước vào là full người địa phương. Mì Quảng ở đây ngon kiểu đậm vị thật sự, bánh xèo giòn tan luôn.
+
+Local còn kể cho mình nghe nhiều chuyện về người Đà Nẵng, về cách họ ăn uống, sinh hoạt… nên cảm giác không chỉ là đi ăn mà giống đang trải nghiệm cuộc sống ở đây luôn ấy.
+
+## 📍 Gợi ý địa điểm
+
+**Bánh Xèo Bà Dưỡng** — K280/23 Hoàng Diệu, Hải Châu
+Bánh xèo kiểu Đà Nẵng — to hơn Sài Gòn, giòn hơn, ăn kèm rau sống và bánh tráng. Không thể bỏ qua.
+
+**Bún Mắm Vân** — K23/14 Trần Kế Xương, Hải Châu
+Bún mắm đậm vị đặc trưng miền Trung. Mạnh mẽ, đậm đà, khác biệt. Ăn quen là nghiện.
+
+**Chè Liên** — 175 Hải Phòng, Thanh Khê
+Quán chè local có thâm niên. Mát lạnh, ngọt dịu, kết thúc hoàn hảo cho một buổi food tour.`,
+  },
+]
